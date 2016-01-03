@@ -23,14 +23,14 @@
 (def kernel
   (doto (Mat. 3 3 CvType/CV_32F)
     (.put 0 0 (double-array [-1]))
-    (.put 0 1 (double-array [-1] ))
-    (.put 0 2 (double-array [-1] ))
+    (.put 0 1 (double-array [-1]))
+    (.put 0 2 (double-array [-1]))
     (.put 1 0 (double-array [0]))
-    (.put 1 1 (double-array [0] ))
-    (.put 1 2 (double-array [0] ))
+    (.put 1 1 (double-array [0]))
+    (.put 1 2 (double-array [0]))
     (.put 2 0 (double-array [1]))
-    (.put 2 1 (double-array [1] ))
-    (.put 2 2 (double-array [1] ))))
+    (.put 2 1 (double-array [1]))
+    (.put 2 2 (double-array [1]))))
 
 (defn transform-image [src dst kernel]
   (Imgproc/filter2D src dst -1 kernel))
